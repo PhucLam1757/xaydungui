@@ -24,6 +24,7 @@ class _MyWidgetState extends State<UiApp> {
       if (_count % 2 == 0) {
         color = Color.fromARGB(Random().nextInt(256), Random().nextInt(256),
             Random().nextInt(256), Random().nextInt(256));
+        
       }
     });
   }
@@ -40,6 +41,7 @@ class _MyWidgetState extends State<UiApp> {
           child: ElevatedButton(
             onPressed: () {
               _setColor();
+              _count++;
               final snackbar = SnackBar(
                   content: Text("Back ground color was changed! $color"),
                   action: SnackBarAction(
